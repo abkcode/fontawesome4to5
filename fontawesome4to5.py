@@ -471,7 +471,7 @@ def upgrade(project_path, extensions, exclude_directories):
 		for fname in files:
 			if(fname.lower().endswith(extensions)):
 				fpath = os.path.join(dname, fname)
-				print fpath
+				print (fpath)
 				s = open(fpath).read()
 				for icon in findreplace:
 					s = s.replace(icon[0]+'"', icon[1]+'"')
@@ -480,7 +480,7 @@ def upgrade(project_path, extensions, exclude_directories):
 					# s = s.replace(icon[0], icon[1])
 				f = open(fpath, "w")
 				f.write(s)
-	print "\nAbove files have been modified"
+	print ("\nAbove files have been modified")
 
 project_path = os.getcwd()
 extensions = ('.html', 'js')
